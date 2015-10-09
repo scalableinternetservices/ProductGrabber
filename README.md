@@ -5,7 +5,7 @@ Tired of going to multiple websites to get the best price for a product? Worry n
 ##Team Members
 ### Debjani Banerjee
 ![alt tag](http://www.cs.ucsb.edu/sites/cs.ucsb.edu/files/styles/portrait-full/public/images/graduate/Banerjee_Debjani.JPG?itok=LqDB-Jv4&c=5e9edca59dfe29e0fa4f6fcdb247aa7e)
----
+
 ### Darshan Maiya
 ![alt tag](http://cs.ucsb.edu/sites/cs.ucsb.edu/files/styles/portrait-full/public/images/graduate/maiya_darshan.jpg?itok=TmIU1Zg8&c=fa9f5c1c4bd0f61ece44f1564d9031be)
 
