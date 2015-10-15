@@ -5,6 +5,14 @@ Track the price of a product across different online shopping websites and get n
 
 **Pivotal Tracker:** [https://www.pivotaltracker.com/n/projects/1446080](https://www.pivotaltracker.com/n/projects/1446080)
 
+##How it works?
+
+1. The user searches for a product of interest across different online shopping portals using the ProductGrabber interface.
+2. The user then selects the required products which have to be tracked.
+3. ProductGrabber will constantly monitor the price of the product selected by the user.
+4. ProductGrabber will notify the user if there is a change in the price of a product he/she is tracking.
+5. The user can then go to the online shopping portal from the ProductGrabber interface and purchase the product.
+
 ##Team Members
 ### Debjani Banerjee
 ![alt tag](http://www.cs.ucsb.edu/sites/cs.ucsb.edu/files/styles/portrait-full/public/images/graduate/Banerjee_Debjani.JPG?itok=LqDB-Jv4&c=5e9edca59dfe29e0fa4f6fcdb247aa7e)
