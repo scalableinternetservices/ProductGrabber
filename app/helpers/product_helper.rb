@@ -56,7 +56,11 @@ module ProductHelper
                 item.title = i.at_css("ItemAttributes/Title").text
                 item.url = i.at_css("DetailPageURL").text
                 item.image = [i.at_css("SmallImage/URL").text, i.at_css("MediumImage/URL").text, i.at_css("LargeImage/URL").text]
-                item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+		if i.at_css("LowestNewPrice/FormattedPrice") == nil
+			item.price = "N/A"
+		else
+                	item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+		end
                 items << item
             end
             items
