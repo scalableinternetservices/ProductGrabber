@@ -1,0 +1,63 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+#main-content-container {
+	padding: 0 25px;
+	padding-top: 50px; /* Offset for fixed navbar */
+	margin-bottom: 10px;
+}
+
+#main-content-container .bluebar {
+	border: 3px solid skyblue;
+	margin: 0px -26px;
+	position: fixed;
+	left: auto;
+	width: inherit;
+	z-index: 1;
+}
+
+#main-content .resume-part {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	border-top: 1px solid skyblue;
+}
+
+#main-content .resume-part .resume-part-details {
+	padding-top: 10px;
+}
+
+#main-content .resume-part .resume-part-section {
+	padding: 10px;
+	border-top: 1px solid gray;
+	margin-bottom: 10px;
+}
+
+#main-content .resume-part .resume-part-section:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+
+#footer {
+	text-align: center;
+	padding: 3px;
+	background-color: skyblue;
+	color: black;
+	margin: 5px -25px -5px;
+	font-weight: bold;
+}
+
+#attributions-modal {
+	color: black;
+}
+
+@media (max-width: 768px) {
+	
+	#main-content > .resume-part {
+		padding-top: 30px;
+	}
+	
+	#main-content > .resume-part h2 {
+		text-align: center;
+	}
+}
