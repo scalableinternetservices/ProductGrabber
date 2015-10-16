@@ -10,10 +10,10 @@
  */
 (function() {
 
-	var viewEl = document.querySelector('.view'),
-		gridEl = viewEl.querySelector('.grid'),
-		items = [].slice.call(gridEl.querySelectorAll('.product')),
-		basket;
+	var viewEl = document.getElementById("view");
+	var gridEl =document.getElementsByClassName('grid');
+	var items = [].slice.call(gridEl[0].getElementsByClassName('.product'));
+	var basket;
 
 	// the compare basket
 	function CompareBasket() {

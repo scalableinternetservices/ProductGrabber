@@ -3056,3 +3056,867 @@ Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b
 
 
 Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-14 21:42:32 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:10:29 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (1.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (138.1ms)
+Completed 200 OK in 247ms (Views: 240.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/component.self-9f95c6cfa5e1820cc8de5f70fa0316c4b33d217c3f8a8f0ec375d2830aa1eda0.css?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:10:29 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:10:30 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:10:30 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:10:30 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:10:30 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:11:08 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 128ms (Views: 126.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/component.self-8f14a9cc012b741bb19d528cf53bd36438572e3a87df3ba82a87843974be6e35.css?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:11:08 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:11:43 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 87ms (Views: 86.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/component.self-7a5dc4934c45fa4e0f8625eb262d3d6103cad507b45e26d3b11f86209c321a29.css?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:11:43 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:18:40 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 134ms (Views: 132.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/component.self-7a5dc4934c45fa4e0f8625eb262d3d6103cad507b45e26d3b11f86209c321a29.css?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:18:41 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:58:47 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 223ms (Views: 213.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/component.self-c2343071e27b389df0838e9365c566793bed295c145dd095fff4eb977f653ee9.css?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:58:48 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:59:09 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:59:10 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:59:44 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:59:45 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 15:59:47 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/assets/main.self-ceb1668d789bba45aa02d8f68c64531ad9d78423fa790eaf7d0c442da21ce8b4.js?body=1" for ::1 at 2015-10-15 15:59:47 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:00:40 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/main.self-9df6de72ee2995e929da21d9f01fb31b1976f8a72f1483b15ca8fbe15e7783c6.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:00:41 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:00:55 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/assets/main.self-9df6de72ee2995e929da21d9f01fb31b1976f8a72f1483b15ca8fbe15e7783c6.js?body=1" for ::1 at 2015-10-15 16:00:55 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:01:40 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/assets/main.self-ee8c3d6fcb73ce6091d131b970a875349421de825c6f0753a88f7c8de8862b46.js?body=1" for ::1 at 2015-10-15 16:01:41 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:02:20 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (54.9ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/assets/main.self-3a1439b033979c6a5884338e99379dd8408b31c831f9a9ecceb958b709620745.js?body=1" for ::1 at 2015-10-15 16:02:20 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:02:49 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/assets/main.self-d3d0946669ada00a3ecc8fd5f992529c8b054243276e88837b98a70d03e8f6ed.js?body=1" for ::1 at 2015-10-15 16:02:50 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:04:49 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/assets/main.self-d3d0946669ada00a3ecc8fd5f992529c8b054243276e88837b98a70d03e8f6ed.js?body=1" for ::1 at 2015-10-15 16:04:49 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:05:04 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 71ms (Views: 70.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/assets/main.self-cf1aa4040aa1bb838fedefb7e96d8950980ac2ab29b133ca71e102fe374b8cd1.js?body=1" for ::1 at 2015-10-15 16:05:04 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:05:17 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:05:17 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:05:17 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:05:17 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/assets/main.self-cf1aa4040aa1bb838fedefb7e96d8950980ac2ab29b133ca71e102fe374b8cd1.js?body=1" for ::1 at 2015-10-15 16:05:18 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:06:09 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/assets/main.self-267461cc6dabd79c662ad1d75fb7689148b7477a120f1bd462a2bc3f59efc4e3.js?body=1" for ::1 at 2015-10-15 16:06:09 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:06:27 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 70ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/assets/main.self-da1ee8c8ccc87b4f75e85f5154540c11df2ff9ddd443491a59b38b2731f9d645.js?body=1" for ::1 at 2015-10-15 16:06:28 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:06:57 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/assets/main.self-52f343f53986708df50c204a5876aa286a8af6b62d53caf748ebc5d87b705622.js?body=1" for ::1 at 2015-10-15 16:06:57 -0700
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:07:05 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/component.self-142bdf88b5b5cbe3c7a4906efe03ad1ead04c252607f2cab0541b88057a81401.css?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/demo.self-5409e49ae38b0d9c7bca1f53aa6357a37665fe4c53867d45cb5533436e203bc6.css?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/application.self-2b00c68320848afe54cf9919a7a76ed257f93bdb6e12dc2160d07a8b1fe5e9f4.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/modernizr.custom.self-38e315a55770f629557e1d30ed48ccc52bc6be63bf74db0d21a2ef44f46f7bff.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/classie.self-7fbfb1b964025cff09be2271d8820948c9c916f327ef1b23aad15feb5733803a.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/assets/main.self-52f343f53986708df50c204a5876aa286a8af6b62d53caf748ebc5d87b705622.js?body=1" for ::1 at 2015-10-15 16:07:05 -0700
+
+
+Started GET "/" for ::1 at 2015-10-15 16:54:49 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/productss" for ::1 at 2015-10-15 16:54:54 -0700
+
+ActionController::RoutingError (No route matches [GET] "/productss"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.6ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.1ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.7ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/debjani/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (174.4ms)
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:54:56 -0700
+Processing by ProductController#index as HTML
+  [1m[36mProduct Load (2.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered product/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for ::1 at 2015-10-15 16:58:01 -0700
+Processing by ProductController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered product/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.2ms)

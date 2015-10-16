@@ -53,7 +53,7 @@
 	min-width: 16em;
 	margin: 0 1em 2.5em;
 	padding: 1.5em 1.5em 2em;
-	background: #24252A;
+	background: #551a8b;
 	border-radius: 5px;
 }
 
@@ -241,16 +241,12 @@
 	transition: opacity 0.3s;
 }
 
-.compare-basket--active .action--compare {
-	opacity: 1;
-}
 
-.compare-basket--active .action--compare:nth-child(3),
-.compare-basket--active .action--compare:nth-child(4) {
-	background-color: #494BC7;
-	color: #fff;
+.compare-basket {
+	background-color: #000000;
 	pointer-events: auto;
 	cursor: pointer;
+	color: #00ff00;
 }
 
 .action--remove {

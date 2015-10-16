@@ -16,15 +16,17 @@
   </head>
   <body>
     <!-- Compare basket -->
-    <div class="compare-basket">
-      <button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
-    </div>
-    <div class="view">
-        <h1>Product Comparison Layout &amp; Effect</h1>
-      
+
+    <div id="view">
+        <h1>Product Comparison</h1>
+     
       <section class="grid">
+        <div class="compare-basket">
+          <button class="action action--button action--compare"><i class="fa fa-check"></i><span class="action__text">Compare</span></button>
+        </div> 
      <% @products.each do |p| %> 
         <div class="product">
+
             <div class="product__info">
                 <p class="product__title"><%= p.name %></p> 
                 <p class="product__year extra highlight"><%= p.origin %></p>
