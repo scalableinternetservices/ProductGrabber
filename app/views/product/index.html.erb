@@ -26,14 +26,11 @@
         </div> 
      <% @products.each do |p| %> 
         <div class="product">
-
             <div class="product__info">
-                <p class="product__title"><%= p.name %></p> 
-                <p class="product__year extra highlight"><%= p.origin %></p>
-                <p class="product__region extra highlight"><%= p.asin %></p>  
-                <p class="product__region extra highlight"><%= p.rating %></p>  
-                <p class="product__alcohol extra highlight"><%= p.info %></p>  
-                <p class="product__price highlight">$<%= p.price %></p>
+                <p class="product__title"><%= p.title %></p>
+                <p class="product__year extra highlight"><img src="<%= p.image[2] %>" alt="Smiley face" height="100" width="100"></p>
+                <p class="product__region extra highlight"><%= p.asin %></p>    
+                <p class="product__price highlight"><%= p.price %></p>
                 <button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="action__text">Add to cart</span></button>
                 <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i class="fa fa-plus"></i><i class="fa fa-check"></i><span class="action__text action__text--invisible">Add to compare</span></label>
               </div> 
@@ -41,8 +38,7 @@
         </div>
         <% end %>
       </section>
-    </div><!-- /view -->
-    <!-- product compare wrapper -->
+    </div>
     <section class="compare">
       <button class="action action--close"><i class="fa fa-remove"></i><span class="action__text action__text--invisible">Close comparison overlay</span></button>
     </section>
