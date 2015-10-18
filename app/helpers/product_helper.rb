@@ -60,7 +60,7 @@ module ProductHelper
                 if i.at_css("LowestNewPrice/FormattedPrice") == nil
                     item.price = "N/A"
                 else
-                            item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+                    item.price = i.at_css("LowestNewPrice/FormattedPrice").text
                 end
                 items << item
             end
