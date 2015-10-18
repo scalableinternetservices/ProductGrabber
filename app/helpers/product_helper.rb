@@ -47,24 +47,27 @@ module ProductHelper
         end
 
         def search(keywords)
-            @params["Keywords"] = keywords
-            result = Nokogiri::XML(open(generate_url))
             items = []
-            result.css("Item").each do |i|
-                item = AmazonProduct.new
-                item.asin = i.css("ASIN").text
-                item.title = i.at_css("ItemAttributes/Title").text
-                item.url = i.at_css("DetailPageURL").text
-                item.image = [i.at_css("SmallImage/URL").text, i.at_css("MediumImage/URL").text, i.at_css("LargeImage/URL").text]
-		if i.at_css("LowestNewPrice/FormattedPrice") == nil
-			item.price = "N/A"
-		else
-                	item.price = i.at_css("LowestNewPrice/FormattedPrice").text
-		end
-                items << item
+            @params["Keywords"] = keywords
+	    for page in 1..5 do
+                @params["ItemPage"] = page
+                result = Nokogiri::XML(open(generate_url))
+                result.css("Item").each do |i|
+                    item = AmazonProduct.new
+                    item.asin = i.css("ASIN").text
+                    item.title = i.at_css("ItemAttributes/Title").text
+                    item.url = i.at_css("DetailPageURL").text
+                    item.image = [i.at_css("SmallImage/URL").text, i.at_css("MediumImage/URL").text, i.at_css("LargeImage/URL").text]
+                    if i.at_css("LowestNewPrice/FormattedPrice") == nil
+                        item.price = "N/A"
+                    else
+                        item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+                    end
+                    items << item
+                end
             end
             items
-        end
+	end
     end
 end
 
