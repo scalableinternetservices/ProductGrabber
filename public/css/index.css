@@ -17,25 +17,14 @@ body {
 	z-index: 1;
 }
 
-#main-content .resume-part {
+#main-content .view-section {
 	padding-top: 50px;
 	padding-bottom: 20px;
 	border-top: 1px solid skyblue;
 }
 
-#main-content .resume-part .resume-part-details {
+#main-content .view-section .view-section-details {
 	padding-top: 10px;
-}
-
-#main-content .resume-part .resume-part-section {
-	padding: 10px;
-	border-top: 1px solid gray;
-	margin-bottom: 10px;
-}
-
-#main-content .resume-part .resume-part-section:first-child {
-	padding-top: 0;
-	border-top: 0;
 }
 
 #footer {
@@ -53,11 +42,11 @@ body {
 
 @media (max-width: 768px) {
 	
-	#main-content > .resume-part {
+	#main-content > .view-section {
 		padding-top: 30px;
 	}
 	
-	#main-content > .resume-part h2 {
+	#main-content > .view-section h2 {
 		text-align: center;
 	}
 }

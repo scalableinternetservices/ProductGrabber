@@ -1,5 +1,12 @@
 requirejs([], function() {
-    $("#btn-search-product").click(function (event) {
-		location.href = "/html/search.html?q=" + $("#txt-search-product").val();
-	});
+    $("#txt-search-product").keydown(function (event) {
+    	if(event.keyCode == 13)
+    		goToSearch(event);
+    });
+    
+    $("#btn-search-product").click(goToSearch);
+    
+    function goToSearch (event) {
+    	location.href = "/products?search=" + $("#txt-search-product").val();
+    }
 });
