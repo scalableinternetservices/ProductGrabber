@@ -1,5 +1,11 @@
-fet = ProductsHelper::AmazonProductQuery.new("fasthall-20")
-fet.set_credential("AKIAJTGFNOEB5LKAVPIQ", "/MjOeKIsLCxyJSc2pz1QjQ0hsW21QanNMTJe9wHf")
+puts "Associate id: "
+associate = gets.chomp
+puts "Tag: "
+tag = gets.chomp
+puts "Key: "
+key = gets.chomp
+fet = ProductsHelper::AmazonProductQuery.new(associate)
+fet.set_credential(tag, key)
 
 Rails.root.join('db', 'dict')
 dict = File.open(Rails.root.join("db", "dict"), "r")
