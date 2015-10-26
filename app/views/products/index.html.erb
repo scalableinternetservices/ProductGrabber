@@ -46,7 +46,6 @@
 					<h3>Search Results for:</h3>
 				</div>
 				
-
 				<div class="col-sm-7 view-section-details">
 
 					<h3>
@@ -64,17 +63,26 @@
 					<h3><%= link_to 'New Product', new_product_path, :class => 'button btn btn-primary' %></h3>
 				</div>
 			</div>
+
 			<div class="row view-section">
+	    		<% for row in @query.facet(:price).rows %>
+		    		<ul class="row col-md-3">
+					    <li>
+					        <% if params[:price_range].blank? %>
+					            <%= link_to row.value, :price_range => row.value, :search => params[:search] %> 
+					        <% else %>
+					            <%= row.value %> 
+					        <% end %>
+					    </li>
+					</ul>
+				<% end %>
+			</div>
+			<div class="row view-section">			
 			    <ul class="nav nav-pills" role="tablist">
-			        <% for row in @query.facet(:price).rows %>
-			            <li role="presentation" >
-			                <% if params[:price_range].blank? %>
-			                    <%= link_to row.value, :price_range => row.value, :search => params[:search] %> 
-			                <% else %>
-			                    <%= row.value %> 
-			                <% end %>
-			            </li>
-			        <% end %>
+			    	<% @products.each do |product| %>
+					   <%= render :partial => "search", :locals => {:product => product} %>
+					<% end %>
+					<%= will_paginate @products, :container => false, :params => { :search_text => params[:search_text] } %>
 			    </ul>
 			</div>
 
