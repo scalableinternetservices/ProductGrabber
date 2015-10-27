@@ -77,6 +77,9 @@ module ProductsHelper
 					features.each do |f|
 						item.feature << f.text + "\n"
 					end
+					if item.feature == ""
+						item.feature = "N/A\n"
+					end
                     items << item
                 end
             end
