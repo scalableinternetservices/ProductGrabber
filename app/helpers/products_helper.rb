@@ -6,6 +6,11 @@ module ProductsHelper
         attr_accessor :image
         attr_accessor :price
         attr_accessor :url
+		attr_accessor :feature
+
+		def initialize
+			@feature = ""
+		end
     end
 
     class AmazonProductQuery
@@ -67,11 +72,16 @@ module ProductsHelper
 		    next if i.at_css("LowestNewPrice/FormattedPrice") == nil
 		    next if i.at_css("LowestNewPrice/FormattedPrice").text[0] != '$'
                     item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+					features = []
+					features = i.css("ItemAttributes/Feature") unless i.css("ItemAttributes/Feature") == nil
+					features.each do |f|
+						item.feature << f.text + "\n"
+					end
                     items << item
                 end
             end
             items
-	end
+		end
     end
 end
 
