@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/png" href="../favicon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="../css/index.css">
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 </head>
@@ -39,17 +38,19 @@
 	<div id="main-content-container" class="container">
 		
 		<div class="bluebar visible-lg-block visible-md-block"></div>
-		
+
 		<div id="main-content">
 			
 			<div class="row">
 				<div class="col-sm-3">
 					<h3>Search Results for:</h3>
 				</div>
+				
 				<div class="col-sm-7 view-section-details">
+
 					<h3>
 						<%= form_tag products_path, :method => :get do %>
-							<div class="input-group">
+							<div class="input-group ui-widget">
 							  <%= text_field_tag :search, params[:search], :class => "form-control", :id =>  "search-results-text" %>
 							  <span class="input-group-btn">
 								<%= submit_tag "Search", :name => nil, :class => "button postfix btn btn-default", :id => "btn-search-product" %>
@@ -62,7 +63,29 @@
 					<h3><%= link_to 'New Product', new_product_path, :class => 'button btn btn-primary' %></h3>
 				</div>
 			</div>
-			
+
+			<div class="row view-section">
+	    		<% for row in @query.facet(:price).rows %>
+		    		<ul class="row col-md-3">
+					    <li>
+					        <% if params[:price_range].blank? %>
+					            <%= link_to row.value, :price_range => row.value, :search => params[:search] %> 
+					        <% else %>
+					            <%= row.value %> 
+					        <% end %>
+					    </li>
+					</ul>
+				<% end %>
+			</div>
+			<div class="row view-section">			
+			    <ul class="nav nav-pills" role="tablist">
+			    	<% @products.each do |product| %>
+					   <%= render :partial => "search", :locals => {:product => product} %>
+					<% end %>
+					<%= will_paginate @products, :container => false, :params => { :search_text => params[:search_text] } %>
+			    </ul>
+			</div>
+
 			<% if @products.empty? %>
 			    <div class="row view-section">
 					<div class="col-sm-12">
@@ -73,7 +96,7 @@
 				<% @products.each do |product| %>
 			    	<div class="row view-section">
 						<div class="col-sm-3">
-							<a href="<%= product %>"><%= image_tag product.photo.url(:thumb) %></a>
+							<img src="/images/default.jpeg"/>
 						</div>
 						<div class="col-sm-9 view-section-details">
 							<h3><%= link_to product.name, product %></h3>
