@@ -34,6 +34,12 @@ module ProductsHelper
                 "Timestamp" => Time.now.gmtime.iso8601
             }
         end
+        
+        def get_rating(asin)
+			content = open("http://www.amazon.com/gp/customer-reviews/widgets/average-customer-review/popover/ref=dpx_acr_pop_?contextId=dpx&asin=" + asin,
+"User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36").read
+			content[398..400]
+		end
 
         def set_credential(id, key)
             @params["AWSAccessKeyId"] = id
@@ -87,4 +93,3 @@ module ProductsHelper
 		end
     end
 end
-
