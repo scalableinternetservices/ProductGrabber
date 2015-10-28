@@ -66,7 +66,7 @@
 
 			<div class="row view-section">
 	    		<% for row in @query.facet(:price).rows %>
-		    		<ul class="row col-md-3">
+		    		<ul class="row col-md-3 center-block">
 					    <li>
 					        <% if params[:price_range].blank? %>
 					            <%= link_to row.value, :price_range => row.value, :search => params[:search] %> 
@@ -86,7 +86,7 @@
 				</div>
 			<% else %>
 				<% @products.each do |product| %>
-			    	<div class="row view-section">
+					<div class="row view-section">
 						<div class="col-sm-3">
 							<%= image_tag product.photo_file_name, size:"200x200" %>
 						</div>
@@ -97,7 +97,9 @@
 						</div>
 					</div>
 				<% end %>
-
+				<div class="row view-section text-center">
+					<%= will_paginate(@products) %>
+				</div>
 			<% end %>
 			
 		</div>
