@@ -77,14 +77,6 @@
 					</ul>
 				<% end %>
 			</div>
-			<div class="row view-section">			
-			    <ul class="nav nav-pills" role="tablist">
-			    	<% @products.each do |product| %>
-					   <%= render :partial => "search", :locals => {:product => product} %>
-					<% end %>
-					<%= will_paginate @products, :container => false, :params => { :search_text => params[:search_text] } %>
-			    </ul>
-			</div>
 
 			<% if @products.empty? %>
 			    <div class="row view-section">
@@ -96,7 +88,7 @@
 				<% @products.each do |product| %>
 			    	<div class="row view-section">
 						<div class="col-sm-3">
-							<img src="/images/default.jpeg"/>
+							<%= image_tag product.photo_file_name, size:"200x200" %>
 						</div>
 						<div class="col-sm-9 view-section-details">
 							<h3><%= link_to product.name, product %></h3>
@@ -105,6 +97,7 @@
 						</div>
 					</div>
 				<% end %>
+
 			<% end %>
 			
 		</div>

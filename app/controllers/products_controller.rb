@@ -6,15 +6,12 @@ class ProductsController < ApplicationController
   def index
     @query = Product.search do
         fulltext params[:search]
-        paginate :page => params[:page] || 1, :per_page => 2
+        paginate :page => params[:page] || 1, :per_page => 5
         facet :price, :range => 0..500, :range_interval => 100
         with(:price, Range.new(*params[:price_range].split("..").map(&:to_i))) if params[:price_range].present?
- 
     end
+
     @products = @query.results
-    respond_to do |format|
-      format.html { render 'index' }
-    end
   end
 
   # GET /products/1
