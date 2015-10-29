@@ -1,4 +1,4 @@
-bundle exec rake sunspot:solr:start
+bundle exec sunspot-solr start -p 8983
 rake db:migrate
 rake db:seed
 bundle exec rake sunspot:solr:reindex
