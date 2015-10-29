@@ -78,6 +78,40 @@
 				<% end %>
 			</div>
 
+<div class="row">
+<!-------- add user welcome ------------->			
+			<% if current_user.nil? %> 
+		
+				   <div class="col-sm-12">
+				   <p>Hello!</p>
+				   </div>
+			<% else %>
+			   <div class="row">			
+		
+				   <div class="col-sm-12">	
+				   <p>Hello, <%= current_user.name %>!
+				   <%= link_to "Enter Profile", @current_user%>
+				   </p>
+				   </div>
+			<% end %>
+<!-------- add user welcome ------------->
+</div>
+
+<div class="row">
+<!-------- add user login\out button ------------->			
+			<% if current_user.nil? %> 
+		
+				   <div class="col-sm-12">
+				   <p><%= link_to "Log in", login_path%></p>
+				   </div>
+			<% else %>
+		
+				   <div class="col-sm-12">	
+				   <p><%= link_to "Log out", logout_path, method: "delete" %></p>
+				   </div>
+			<% end %>
+<!-------- add user login\out button ------------->
+</div>			
 			<% if @products.empty? %>
 			    <div class="row view-section">
 					<div class="col-sm-12">
