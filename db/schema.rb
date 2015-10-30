@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027233640) do
+ActiveRecord::Schema.define(version: 20151029225958) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name"
+    t.text     "name"
     t.float    "price"
     t.text     "description"
     t.string   "photo"
@@ -38,5 +45,10 @@ ActiveRecord::Schema.define(version: 20151027233640) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "welcomes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
