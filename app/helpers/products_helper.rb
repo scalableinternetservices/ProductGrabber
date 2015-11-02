@@ -6,6 +6,11 @@ module ProductsHelper
         attr_accessor :image
         attr_accessor :price
         attr_accessor :url
+		attr_accessor :feature
+
+		def initialize
+			@feature = ""
+		end
     end
 
     class AmazonProductQuery
@@ -29,6 +34,12 @@ module ProductsHelper
                 "Timestamp" => Time.now.gmtime.iso8601
             }
         end
+        
+        def get_rating(asin)
+			content = open("http://www.amazon.com/gp/customer-reviews/widgets/average-customer-review/popover/ref=dpx_acr_pop_?contextId=dpx&asin=" + asin,
+"User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36").read
+			content[398..400]
+		end
 
         def set_credential(id, key)
             @params["AWSAccessKeyId"] = id
@@ -67,11 +78,18 @@ module ProductsHelper
 		    next if i.at_css("LowestNewPrice/FormattedPrice") == nil
 		    next if i.at_css("LowestNewPrice/FormattedPrice").text[0] != '$'
                     item.price = i.at_css("LowestNewPrice/FormattedPrice").text
+					features = []
+					features = i.css("ItemAttributes/Feature") unless i.css("ItemAttributes/Feature") == nil
+					features.each do |f|
+						item.feature << f.text + "\n"
+					end
+					if item.feature == ""
+						item.feature = "N/A\n"
+					end
                     items << item
                 end
             end
             items
-	end
+		end
     end
 end
-

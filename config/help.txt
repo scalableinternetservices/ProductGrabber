@@ -1,0 +1,40 @@
+# Modify solr/solr.xml
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<solr persistent="false">
+  <cores adminPath="/admin/cores" host="${host:}" hostPort="${jetty.port:}">
+    <core name="production"     instanceDir="." dataDir="production/data"/>
+    <core name="default"     instanceDir="." dataDir="default/data"/>
+    <core name="development" instanceDir="." dataDir="development/data"/>
+    <core name="test"        instanceDir="." dataDir="test/data"/>
+  </cores>
+</solr>
+
+# Modify config/database.yml (For our app)
+
+production:
+  adapter: mysql2
+  database: rails_app
+  strict: false
+
+# Modify config/sunspot.yml
+production:
+  solr:
+    hostname: localhost
+    port: 8983
+    log_level: WARNING
+    path: /solr/default
+    # read_timeout: 2
+    # open_timeout: 0.5
+
+# Gemfile (remove all development groupings)
+  .....
+  gem 'spring'
+  gem 'acts-as-taggable-on'
+  gem 'sunspot_rails'
+  gem 'sunspot_solr'
+
+
+# Command
+bundle exec rake sunspot:solr:start
+bundle exec rake sunspot:solr:reindex

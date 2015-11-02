@@ -47,6 +47,10 @@
 					<p id="notice"><%= notice %></p>
 
 					<p>
+					  <%= image_tag @product.photo_file_name, size:"200x200" %>
+					</p>
+
+					<p>
 					  <strong>Name:</strong>
 					  <%= @product.name %>
 					</p>
@@ -61,10 +65,6 @@
 					  <%= @product.description %>
 					</p>
 
-					<p>
-					  <strong>Photo:</strong>
-					  <%= @product.photo %>
-					</p>
 
 					<%= link_to 'Edit', edit_product_path(@product) %> |
 					<%= link_to 'Back', products_path %>
