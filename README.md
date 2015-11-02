@@ -13,15 +13,6 @@ Track the price of a product across different online shopping websites and get n
 4. ProductGrabber will notify the user if there is a change in the price of a product he/she is tracking.
 5. The user can then go to the online shopping portal from the ProductGrabber interface and purchase the product.
 
-##Team Members
-### Debjani Banerjee
-![alt tag](http://www.cs.ucsb.edu/sites/cs.ucsb.edu/files/styles/portrait-full/public/images/graduate/Banerjee_Debjani.JPG?itok=LqDB-Jv4&c=5e9edca59dfe29e0fa4f6fcdb247aa7e)
-
-### Darshan Maiya
-=======
-
-Get the best price for a product by comparing prices of it across different online shops.
-
 #Team Members
 ## Debjani Banerjee
 ![alt tag](http://www.cs.ucsb.edu/sites/cs.ucsb.edu/files/styles/portrait-full/public/images/graduate/Banerjee_Debjani.JPG?itok=LqDB-Jv4&c=5e9edca59dfe29e0fa4f6fcdb247aa7e)
