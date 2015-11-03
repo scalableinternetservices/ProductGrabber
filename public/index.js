@@ -6,7 +6,13 @@ requirejs([], function() {
     
     $("#btn-search-product").click(goToSearch);
     
+    $("#lnk-search-products").click(function (event) {
+    	$("#search-form-container").fadeIn(500);
+    	event.prevenDefault();
+    });
+    
     function goToSearch (event) {
-    	location.href = "/products?search=" + $("#txt-search-product").val();
+    	if($("#txt-search-product").val().trim() != "")
+    		location.href = "/products?search=" + $("#txt-search-product").val().trim();
     }
 });
