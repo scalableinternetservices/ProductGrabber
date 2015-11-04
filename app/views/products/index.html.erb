@@ -1,43 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head profile="http://www.w3.org/2005/10/profile">
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="icon" type="image/png" href="../favicon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/index.css">
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-</head>
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">ProductGrabber</a>
-			</div>
-	
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/#about">About</a></li>
-					<li><a href="/#howItWorks">How it works</a></li>
-					<li><a href="/#search">Search</a></li>
-					<li><a href="https://github.com/scalableinternetservices/ProductGrabber" target="_blank">GitHub</a></li>
-					<li><a href="https://www.pivotaltracker.com/n/projects/1446080" target="_blank">Pivotal</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
-	<div id="main-content-container" class="container">
-		
-		<div class="bluebar visible-lg-block visible-md-block"></div>
 
 		<div id="main-content">
 
@@ -52,56 +12,31 @@
 				
 				<div class="col-sm-7 view-section-details">
 
-					<h3>
-						<%= form_tag products_path, :method => :get do %>
-							<div class="input-group ui-widget">
-							  <%= text_field_tag :search, params[:search], :class => "form-control", :id =>  "search-results-text" %>
-							  <span class="input-group-btn">
-								<%= submit_tag "Search", :name => nil, :class => "button postfix btn btn-default", :id => "btn-search-product" %>
-							  </span>
-							</div>
-						<% end %>
-					</h3>
-				</div>
-				<div class="col-sm-2 view-section-details">
-					<h3><%= link_to 'New Product', new_product_path, :class => 'button btn btn-primary' %></h3>
-				</div>
-			</div>
-
-			<div class="row view-section">
-	    		<% for row in @query.facet(:price).rows %>
-		    		<ul class="row col-md-3 center-block">
-					    <li>
-					        <% if params[:price_range].blank? %>
-					            <%= link_to row.value, :price_range => row.value, :search => params[:search] %> 
-					        <% else %>
-					            <%= row.value %> 
-					        <% end %>
-					    </li>
-					</ul>
-				<% end %>
-			</div>
-
 <div class="row">
-<!-------- add user welcome ------------->			
-			<% if current_user.nil? %> 
-		
-				   <div class="col-sm-12">
-				   <p>Hello!</p>
-				   </div>
-			<% else %>
-			   <div class="row">			
-		
-				   <div class="col-sm-12">	
-				   <p>Hello, <%= current_user.name %>!
-				   <%= link_to "Enter Profile", @current_user%>
-				   </p>
-				   </div>
+	<div class="col-sm-3">
+		<h3>Search: </h3>
+	</div>
+	
+	<div class="col-sm-7 view-section-details">
+
+		<h3>
+			<%= form_tag products_path, :method => :get do %>
+				<div class="input-group ui-widget">
+				  <%= text_field_tag :search, params[:search], :class => "form-control", :id =>  "search-results-text" %>
+				  <span class="input-group-btn">
+				  	<button type="submit" class="button postfix btn btn-default" id="btn-search-product"><span class="glyphicon glyphicon-search"></span></button>
+				  </span>
+				</div>
 			<% end %>
-<!-------- add user welcome ------------->
+		</h3>
+	</div>
+	<div class="col-sm-2 view-section-details">
+		<h3 class="pull-right"><%= link_to 'New Product', new_product_path, :class => 'button btn btn-primary' %></h3>
+	</div>
 </div>
 
 <div class="row">
+<<<<<<< HEAD
 <!-------- add user login\out button ------------->			
 			<% if current_user.nil? %> 
 		
@@ -142,43 +77,45 @@
 
 						</div>
 					</div>
-				<% end %>
-				<div class="row view-section text-center">
-					<%= will_paginate(@products) %>
-				</div>
-			<% end %>
-			
-		</div>
-		
-		<div id="footer">
-			<p>© 2015 ProductGrabber Team&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="#attributions-modal" data-toggle="modal" data-target="#attributions-modal">Attributions</a></p>
-			<p></p>
-		</div>
-		
-		<div id="attributions-modal" class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Attributions</h4>
-					</div>
-					<div class="modal-body">
-						<ol>
-							<li><div>Favicon by <a href="http://flaticons.net/" title="Flaticon">Flaticon</a> (Royalty free).</div></li>
-						</ol>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+=======
+	<div class="col-sm-3">
+		<h3>Price Range ($): </h3>
 	</div>
 	
-	<script data-main="../scripts/search" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-</html>
+	<div class="col-sm-7 view-section-details">
+		<h3>
+			<ul class="pagination" style="margin-top: 0;">
+    			<% for row in @query.facet(:price).rows %>
+				    <li>
+				        <%= link_to row.value, :price_range => row.value, :search => params[:search] %>
+				    </li>
+>>>>>>> 4e77e40d251cd123de51171fd351af2c4b1d91b1
+				<% end %>
+			</ul>
+		</h3>
+	</div>
+</div>
+
+<% if @products.empty? %>
+    <div class="row view-section">
+		<div class="col-sm-12">
+			No products found. Please change search criteria and try again.
+		</div>
+	</div>
+<% else %>
+	<% @products.each do |product| %>
+		<div class="row view-section">
+			<div class="col-sm-3">
+				<%= image_tag product.photo_file_name, size:"200x200" %>
+			</div>
+			<div class="col-sm-9 view-section-details">
+				<h3><%= link_to product.name, product %></h3>
+				<p class="text-danger"><strong><%= number_to_currency(product.price) %></strong></p>
+				<p class="text-muted"><%= product.description %></p>
+			</div>
+		</div>
+	<% end %>
+	<div class="row view-section text-center">
+		<%= will_paginate(@products) %>
+	</div>
+<% end %>

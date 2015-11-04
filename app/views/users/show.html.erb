@@ -1,4 +1,6 @@
-<%= @user.name %>, <%= @user.email %>
+<h2 class="text-info">Show User</h2>
+<br />
+
 
 <%= link_to "Log out", logout_path, method: "delete" %>
 <%= link_to "Enter Productgrabber", products_path%>
@@ -22,3 +24,26 @@
         </div>
     <% end %>
 <% end %>
+
+<div class="row">
+	<div class="col-md-1">
+		<h4><strong>Name: </strong></h4>
+	</div>
+	<div class="col-md-11">
+		<h4><%= @user.name %></h4>
+	</div>
+</div>
+<br />
+<div class="row">
+	<div class="col-md-1">
+		<h4><strong>Email: </strong></h4>
+	</div>
+	<div class="col-md-11">
+		<h4><%= @user.email %></h4>
+	</div>
+</div>
+
+<br /><br />
+<%= link_to "Log out", logout_path, method: "delete" %> |
+<%= link_to "Back", products_path%>
+
