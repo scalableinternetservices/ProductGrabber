@@ -1,10 +1,6 @@
 <h2 class="text-info">Show User</h2>
 <br />
 
-
-<%= link_to "Log out", logout_path, method: "delete" %>
-<%= link_to "Enter Productgrabber", products_path%>
-
 <strong>Your favorites listed below:</strong>
 
 <% if @user.favorites.empty? %>
@@ -19,7 +15,7 @@
             <h3><%= link_to fav.product.name, fav.product %></h3>
             <p class="text-danger"><strong><%= number_to_currency(fav.product.price) %></strong></p>
             <p class="text-muted"><%= fav.product.description %></p>
-            <%= link_to 'dislike it!', favorites_path(fav), method: 'delete' %>
+            <%= link_to 'dislike it!', favorite_path(fav), method: 'delete' %>
           </div>
         </div>
     <% end %>
