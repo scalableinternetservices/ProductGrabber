@@ -1,0 +1,27 @@
+
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+<h2>Your Pragmatic Cart</h2>
+<ul>
+  <strong>Ranked by price:</strong>
+  <% @cart.sorted_by_price.each do |item| %>
+      <li><%= item.quantity %> &times; <%= item.product.name %></li>
+      <strong><%= number_to_currency(item.product.price) %></strong>
+      <%=link_to "don't want it any more", line_item_path(item), method: 'delete'%>
+  <% end %>
+  <br>
+  <br>
+
+  <strong>Ranked by likes:</strong>
+  <% @cart.sorted_by_likes.each do |item| %>
+      <li><%= item.quantity %> &times; <%= item.product.name %></li>
+      <strong>liked by <%= item.product.favorites.count %> customers</strong>
+      <%=link_to "don't want it any more", line_item_path(item), method: 'delete'%>
+  <% end %>
+
+  <%= button_to 'Empty cart', @cart, method: 'delete', confirm: 'Are you sure?' %>
+  <br>
+  <%= button_to 'Continue adding products', products_path, method: 'get'%>
+
+</ul>
