@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  root 'welcomes#index'
+  resources :favorites
+  resources :line_items
+  resources :carts
 
+  root 'welcomes#index'
   get 'sessions/new'
 
-  get 'users/new'
-  get 'signup'  => 'users#new'
+  get  'users/new'
+  get  'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

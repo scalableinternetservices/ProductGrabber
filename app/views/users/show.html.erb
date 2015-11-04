@@ -2,3 +2,23 @@
 
 <%= link_to "Log out", logout_path, method: "delete" %>
 <%= link_to "Enter Productgrabber", products_path%>
+
+<strong>Your favorites listed below:</strong>
+
+<% if @user.favorites.empty? %>
+    No products added. You could add products now!.
+<% else %>
+    <% @user.favorites.each do |fav| %>
+        <div class="row view-section">
+          <div class="col-sm-3">
+            <%= image_tag fav.product.photo_file_name, size:"200x200" %>
+          </div>
+          <div class="col-sm-9 view-section-details">
+            <h3><%= link_to fav.product.name, fav.product %></h3>
+            <p class="text-danger"><strong><%= number_to_currency(fav.product.price) %></strong></p>
+            <p class="text-muted"><%= fav.product.description %></p>
+            <%= link_to 'dislike it!', favorites_path(fav), method: 'delete' %>
+          </div>
+        </div>
+    <% end %>
+<% end %>

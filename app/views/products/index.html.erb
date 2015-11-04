@@ -40,7 +40,11 @@
 		<div class="bluebar visible-lg-block visible-md-block"></div>
 
 		<div id="main-content">
-			
+
+		  <% if notice %>
+			  <p id="notice"><%= notice %></p>
+		  <% end %>
+
 			<div class="row">
 				<div class="col-sm-3">
 					<h3>Search Results for:</h3>
@@ -128,6 +132,14 @@
 							<h3><%= link_to product.name, product %></h3>
 							<p class="text-danger"><strong><%= number_to_currency(product.price) %></strong></p>
 							<p class="text-muted"><%= product.description %></p>
+						  <% if !current_user.find_product(product.id) %>
+							  <%= link_to 'Add', favorites_path(product_id: product), method: 'post'%> |
+						  <% else %>
+							  <%= link_to 'Dislike', favorite_path(current_user.like_product(product.id)), method: 'delete' %> |
+						  <% end %>
+						  <%= link_to 'Add to Cart', line_items_path(product_id: product), method: 'post'%>
+						  <p>liked by <%= product.favorites.count %> customers</p>
+
 						</div>
 					</div>
 				<% end %>
