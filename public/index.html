@@ -28,9 +28,10 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="/#about">About</a></li>
 					<li><a href="/#howItWorks">How it works</a></li>
-					<li><a href="/#search">Search</a></li>
+					<li><a href="/#products">Products</a></li>
 					<li><a href="https://github.com/scalableinternetservices/ProductGrabber" target="_blank">GitHub</a></li>
 					<li><a href="https://www.pivotaltracker.com/n/projects/1446080" target="_blank">Pivotal</a></li>
+					<li><a href="/login">Log In</a></li>
 				</ul>
 			</div>
 		</div>
@@ -76,15 +77,18 @@
 				</div>
 			</div>
 			
-			<div class="row view-section" id="search">
+			<div class="row view-section" id="products">
 				<div class="col-sm-3">
-					<h2 class="text-primary">Search</h2>
+					<h2 class="text-primary">Products</h2>
 				</div>
-				<div class="col-sm-9 view-section-details">
-					<div class="input-group">
-					  <input type="text" class="form-control" placeholder="Search for products" id="txt-search-product">
+				<div class="col-sm-9 view-section-details form-inline">
+					<div><a href="products"><button class="btn btn-link">See all products</button></a></div>
+					<div><a href="products/new"><button class="btn btn-link">Create a product</button></a></div>
+					<div><a href="#" id="lnk-search-products"><button class="btn btn-link">Search for product(s)</button></a></div>
+					<div class="input-group" id="search-form-container" style="display: none; margin-left: 10px;">
+					  <input type="text" class="form-control" placeholder='Eg. "camera"' id="txt-search-product"/>
 					  <span class="input-group-btn">
-						<button class="btn btn-default" type="button" id="btn-search-product"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+						<button class="btn btn-default" type="button" id="btn-search-product"><span class="glyphicon glyphicon-search"></span></button>
 					  </span>
 					</div>
 				</div>
