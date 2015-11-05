@@ -1,6 +1,7 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
   @@mode=0
+  @@count=0
 
   def sort_choice(mode)
     @@mode=mode
@@ -25,6 +26,14 @@ class Cart < ActiveRecord::Base
     else
       line_items.sort {|a,b| a.product.price <=> b.product.price}
     end
+  end
+
+  def count
+    @@count=@@count+1
+  end
+
+  def count_load(count)
+    @@count=count
   end
 
 end

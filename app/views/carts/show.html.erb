@@ -15,12 +15,12 @@
 
       <div class="row view-section">
         <div class="col-sm-3">
+          <strong><%= @cart.count %></strong>
           <%= image_tag item.product.photo_file_name, size:"200x200" %>
         </div>
         <div class="col-sm-9 view-section-details">
           <h3><%= link_to item.product.name, item.product %></h3>
           <p class="text-danger"><strong><%= number_to_currency(item.product.price) %></strong></p>
-          <p class="text-muted"><%= item.product.description %></p>
           <% if !current_user.find_product(item.product.id) %>
               <%= link_to 'Add', favorites_path(product_id: item.product), method: 'post'%> |
           <% else %>
