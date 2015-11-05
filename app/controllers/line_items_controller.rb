@@ -31,7 +31,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart,
+        format.html { redirect_to time_sort_cart_path(@cart),
                                   notice: 'Line item was successfully created.' }
         format.json { render json: @line_item,
                              status: :created, location: @line_item }
@@ -61,8 +61,9 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.json
   def destroy
     @line_item=LineItem.find(params[:id])
+    @cart = current_cart
     respond_to do |format|
-      format.html { redirect_to @line_item.cart, notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to time_sort_cart_path(@cart), notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
     end
     @line_item.destroy

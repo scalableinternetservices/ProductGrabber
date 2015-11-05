@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update]
+  before_action :set_cart, only: [:show, :edit, :update, :like_sort, :price_sort, :time_sort]
 
   # GET /carts
   # GET /carts.json
@@ -24,11 +24,13 @@ class CartsController < ApplicationController
   # POST /carts
   # POST /carts.json
   def create
-    @cart = Cart.new(cart_params)
+    @cart = current_cart
+
+    #@cart.line_items.sort!{|a,b|a.updated_at <=> b.updated_at}
 
     respond_to do |format|
       if @cart.save
-        format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
+        format.html { redirect_to time_sort_cart_path(@cart), notice: 'Cart was successfully created.' }
         format.json { render :show, status: :created, location: @cart }
       else
         format.html { render :new }
@@ -57,11 +59,26 @@ class CartsController < ApplicationController
       @cart = current_cart
       @cart.destroy
       session[:cart_id] = nil
+
       respond_to do |format|
-        format.html { redirect_to products_path,
-                                  notice: 'Your cart is currently empty' }
+        format.html { redirect_to products_path, notice: 'Your cart has been empty'}
         format.json { head :no_content }
       end
+  end
+
+  def like_sort
+    @cart.sort_choice(1)
+    redirect_to @cart
+  end
+
+  def price_sort
+    @cart.sort_choice(2)
+    redirect_to @cart
+  end
+
+  def time_sort
+    @cart.sort_choice(0)
+    redirect_to @cart
   end
 
   private
