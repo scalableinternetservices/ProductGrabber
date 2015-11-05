@@ -23,11 +23,15 @@
 <br />
 <br />
 
+<h3>Favorites</h3>
 
 <% if @user.favorites.empty? %>
-    <strong>No products added. Add products now!.</strong>
+    <div class="row view-section">
+      <div class="col-sm-3">
+      <h5>No products added. Add products now!.</h5>
+    </div>
+    </div>
 <% else %>
-    <h3>Favorites</h3>
     <% @user.favorites.each do |fav| %>
         <div class="row view-section">
           <div class="col-sm-3">
