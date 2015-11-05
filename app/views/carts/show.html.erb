@@ -1,0 +1,44 @@
+<h2 class="text-info">Your Cart</h2>
+<br />
+
+<%= link_to 'Ranked by price',price_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+<%= link_to 'Ranked by like',like_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+
+<br /><br />
+
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<ul>
+  <% @cart.sort_items.each do |item| %>
+
+      <br /><br />
+      <div class="row view-section">
+        <div class="col-sm-3">
+          <strong><%= @cart.count %></strong>
+          <%= image_tag item.product.photo_file_name, size:"200x200" %>
+        </div>
+        <div class="col-sm-9 view-section-details">
+          <h3><%= link_to item.product.name, item.product %></h3>
+          <p class="text-danger"><strong><%= number_to_currency(item.product.price) %></strong></p>
+          <% if !current_user.find_product(item.product.id) %>
+              <%= link_to 'Add', favorites_path(product_id: item.product), method: 'post'%> |
+          <% else %>
+              <%= link_to 'Dislike', favorite_path(current_user.like_product(item.product.id)), method: 'delete' %> |
+          <% end %>
+          <p>liked by <%= item.product.favorites.count %> customers</p>
+
+          <%=link_to "Remove from my cart", line_item_path(item), method: 'delete'%>
+        </div>
+      </div>
+  <% end %>
+  <br /><br />
+  <div class="row view-section">
+  </div>
+</ul>
+
+  <%= link_to 'Empty cart', @cart, method: 'delete', confirm: 'Are you sure?',:class => 'button btn btn-primary' %>
+  <%= link_to 'Continue adding products', products_path, method: 'get',:class => 'button btn btn-primary' %>
+
+<br /><br />

@@ -2777,3 +2777,16 @@ Product.create!([
   {name: "ReadyPlug® USB Charger for NVIDIA Shield Portable - AC/DC Wall Adapter 2A USB Port (White)", price: 4.19, description: "Color: White\nIC Smart Chip prevents over charging\nHQ Design for Travel Spare or Replacement\nIncludes: AC/DC 2A Rapid Charger Adapter for: NVIDIA Shield Portable\nReadyPlug® Lifetime Warranty\n", photo: nil, photo_file_name: "http://ecx.images-amazon.com/images/I/31GKXFaVxrL.jpg", photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil, url: "http://www.amazon.com/ReadyPlug%C2%AE-Charger-NVIDIA-Shield-Portable/dp/B00QDD8ZI2%3Fpsc%3D1%26SubscriptionId%3DAKIAIOIQ7RVLXBLE63QA%26tag%3Dfasthall-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00QDD8ZI2", rating: 0.0},
   {name: "Nvidia 3D Vision 2 Wireless Glasses 942-11431-0106-001", price: 79.99, description: "Try new 27'' 3D monitors from ASUS and Acer for Full HD 1080p 3D and ghost-free image quality\nExperience games more fully with 20% larger lenses for an ultra wide viewing area\nGet the most diverse ecosystem of content-including\n3D photo sharing and browsing-on\n3D Glasses Only\n", photo: nil, photo_file_name: "http://ecx.images-amazon.com/images/I/41nzrVxTjbL.jpg", photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil, url: "http://www.amazon.com/Nvidia-Vision-Wireless-Glasses-942-11431-0106-001/dp/B00BF47RSI%3FSubscriptionId%3DAKIAIOIQ7RVLXBLE63QA%26tag%3Dfasthall-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00BF47RSI", rating: 0.0}
 ])
+
+photo = File.new("#{Rails.root}/app/assets/images/default.jpeg")
+
+desc1 = 'This is a 16.1 MP Digital Camera with 60x Optical Image Stabilized Zoom and 3 inch LCD. It offers full 1080p HD video recording with auto focus and has realistic Dolby Digital quality sound recording for enhanced audio quality. It comes with 15 filter effects that can be used on your photos and video.'
+desc2 = 'This is a 20.1 MP Digital Camera with a 2.7 inch LCD. It can record 720p HD movies. It has face detection technology that detects up to eight individual faces and adjusts focus, exposure and white balance to help deliver crisp, properly lit images of family and friends.'
+desc3 = 'This is a 12.1 MP Digital Camera with 30x optical zoom and 1080p full HD video. It has built in Wi-Fi technology for on-the-go convenience when you want to share your photos and videos with friends, family and the whole world.'
+desc4 = 'This is an instant film camera. It automatically detects the brightness of the surrounding and adjusts the amount of flash and shutter speed to optimize photo quality. It has kids mode suitable for photographing kids, pets and other fast moving subjects due to a fast shutter speed.'
+
+Product.create! :name => 'Panasonic LUMIX DMC-FZ70', :price => 320.00, :description => desc1, :photo => photo
+Product.create! :name => 'Sony DSC W830/B', :price => 140.00, :description => desc2, :photo => photo
+Product.create! :name => 'Canon PowerShot SX510 HS', :price => 230.00, :description => desc3, :photo => photo
+Product.create! :name => 'Fujifilm Instax Mini 90 Neo Classic Instant Film Camera', :price => 150.00, :description => desc4, :photo => photo
+

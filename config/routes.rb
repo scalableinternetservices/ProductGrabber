@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
-  root 'welcomes#index'
+  resources :favorites
+  resources :line_items
 
+  resources :carts do
+    get :like_sort, on: :member
+    get :price_sort, on: :member
+    get :time_sort, on: :member
+  end
+
+  root 'welcomes#index'
   get 'sessions/new'
 
-  get 'users/new'
-  get 'signup'  => 'users#new'
+  get  'users/new'
+  get  'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
