@@ -1,11 +1,33 @@
-<h2 class="text-info">Show User</h2>
 <br />
 
-<strong>Your favorites listed below:</strong>
+<h3>Profile</h3>
+<div class="row view-section">
+  <div class="col-md-1">
+    <h4><strong>Name: </strong></h4>
+  </div>
+  <div class="col-md-11">
+    <h4><%= @user.name %></h4>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-md-1">
+    <h4><strong>Email: </strong></h4>
+  </div>
+  <div class="col-md-11">
+    <h4><%= @user.email %></h4>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+
 
 <% if @user.favorites.empty? %>
-    No products added. You could add products now!.
+    <strong>No products added. Add products now!.</strong>
 <% else %>
+    <h3>Favorites</h3>
     <% @user.favorites.each do |fav| %>
         <div class="row view-section">
           <div class="col-sm-3">
@@ -21,23 +43,6 @@
     <% end %>
 <% end %>
 
-<div class="row">
-	<div class="col-md-1">
-		<h4><strong>Name: </strong></h4>
-	</div>
-	<div class="col-md-11">
-		<h4><%= @user.name %></h4>
-	</div>
-</div>
-<br />
-<div class="row">
-	<div class="col-md-1">
-		<h4><strong>Email: </strong></h4>
-	</div>
-	<div class="col-md-11">
-		<h4><%= @user.email %></h4>
-	</div>
-</div>
 
 <br /><br />
 <%= link_to "Log out", logout_path, method: "delete" %> |

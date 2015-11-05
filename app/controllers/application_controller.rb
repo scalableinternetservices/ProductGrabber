@@ -15,18 +15,24 @@ class ApplicationController < ActionController::Base
   private
 
   def current_cart
-    Cart.find(session[:cart_id])
-  rescue ActiveRecord::RecordNotFound
-    cart = Cart.create
-    session[:cart_id] = cart.id
-    cart
+    @user=current_user
+
+      Cart.find(session[:cart_id])
+      rescue ActiveRecord::RecordNotFound
+        if @user.cart.nil?
+          cart = Cart.create
+          @user.cart=cart
+          session[:cart_id] = cart.id
+          cart
+        else
+          session[:cart_id] = @user.cart.id
+          @user.cart
+        end
   end
+
 
   def log_out
     session.delete(:user_id)
-    current_cart
-    @cart=Cart.find(session[:cart_id])
-    @cart.destroy
     session.delete(:cart_id)
     @current_user = nil
   end

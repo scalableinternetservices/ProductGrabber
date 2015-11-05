@@ -1,6 +1,10 @@
 <h2 class="text-info">Your Cart</h2>
 <br />
 
+<%= link_to 'Ranked by price',price_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+<%= link_to 'Ranked by like',like_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+
+<br /><br />
 
 <% if notice %>
     <p id="notice"><%= notice %></p>
@@ -8,11 +12,9 @@
 
 <ul>
 
-  <%= link_to 'Ranked by price',price_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
-  <%= link_to 'Ranked by like',like_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
-
   <% @cart.sort_items.each do |item| %>
 
+      <br /><br />
       <div class="row view-section">
         <div class="col-sm-3">
           <strong><%= @cart.count %></strong>
