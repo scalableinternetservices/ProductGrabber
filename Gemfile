@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'yaml_db'
 gem 'seed_dump'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -40,6 +41,5 @@ gem 'byebug'
 gem 'web-console', '~> 2.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sunspot_rails'
-
 
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
