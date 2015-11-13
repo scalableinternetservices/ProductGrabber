@@ -41,7 +41,7 @@
             <h3><%= link_to fav.product.name, fav.product %></h3>
             <p class="text-danger"><strong><%= number_to_currency(fav.product.price) %></strong></p>
             <p class="text-muted"><%= fav.product.description %></p>
-            <%= link_to 'dislike it!', favorite_path(fav), method: 'delete' %>
+            <%= link_to 'Remove like', favorite_path(fav), method: 'delete' %>
           </div>
         </div>
     <% end %>

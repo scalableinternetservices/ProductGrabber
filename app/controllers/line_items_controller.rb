@@ -32,7 +32,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to time_sort_cart_path(@cart),
-                                  notice: 'Line item was successfully created.' }
+                                  notice: 'Item successfully added to cart.' }
         format.json { render json: @line_item,
                              status: :created, location: @line_item }
       else
@@ -63,7 +63,7 @@ class LineItemsController < ApplicationController
     @line_item=LineItem.find(params[:id])
     @cart = current_cart
     respond_to do |format|
-      format.html { redirect_to time_sort_cart_path(@cart), notice: 'Line item was successfully destroyed.' }
+      format.html { redirect_to time_sort_cart_path(@cart), notice: 'Item successfully removed from cart.' }
       format.json { head :no_content }
     end
     @line_item.destroy
