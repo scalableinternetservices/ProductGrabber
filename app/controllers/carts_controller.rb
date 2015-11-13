@@ -1,5 +1,7 @@
+include CartsHelper
+
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :like_sort, :price_sort, :time_sort]
+  before_action :set_cart, only: [:show, :edit, :update, :like_sort, :price_sort, :time_sort, :search, :init]
 
   # GET /carts
   # GET /carts.json
@@ -31,7 +33,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
-        format.html { redirect_to time_sort_cart_path(@cart), notice: 'Cart was successfully created.' }
+        format.html { redirect_to init_cart_path(@cart), notice: 'Cart was successfully created.' }
         format.json { render :show, status: :created, location: @cart }
       else
         format.html { render :new }
@@ -57,39 +59,56 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-      @cart = current_cart
-      @cart.destroy
-      session[:cart_id] = nil
+    @cart = current_cart
+    @cart.get_items(nil)
+    @cart.destroy
+    session[:cart_id] = nil
 
-      respond_to do |format|
-        format.html { redirect_to products_path, notice: 'Your cart has been empty'}
-        format.json { head :no_content }
-      end
-  end
-
-  def like_sort
-    @cart.sort_choice(1)
-    redirect_to @cart
+    respond_to do |format|
+      format.html { redirect_to products_path, notice: 'Your cart has been empty'}
+      format.json { head :no_content }
+    end
   end
 
   def price_sort
-    @cart.sort_choice(2)
+    @cart.get_items(@cart.items.sort {|a,b| a.product.price <=> b.product.price}) if !@cart.items.nil?
+    redirect_to @cart
+  end
+
+  def like_sort
+    #@cart.get_items(@cart.cur_items.sort {|a,b| a.product.favorites.count <=> b.product.favorites.count}.reverse)
+    @cart.get_items(@cart.items.sort {|a,b| a.product.favorites.count <=> b.product.favorites.count}.reverse) if !@cart.items.nil?
     redirect_to @cart
   end
 
   def time_sort
-    @cart.sort_choice(0)
+    @cart.get_items(@cart.items.sort {|a,b| a.updated_at <=> b.updated_at}.reverse) if !@cart.items.nil?
+    redirect_to @cart
+  end
+
+  def init
+    @cart.get_items(nil)
+    @cart.get_items(@cart.line_items)
+    @cart.get_re_products(nil)
+    redirect_to time_sort_cart_path(@cart)
+  end
+
+  def search
+    @cart.get_items(@cart.category[params[:key]])
+    p=Product.all
+    @hash=p.group_by{|p| p.category}
+    @cart.get_re_products(@hash[params[:key]])
     redirect_to @cart
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cart_params
-      params[:cart]
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    params[:cart]
+  end
 end
