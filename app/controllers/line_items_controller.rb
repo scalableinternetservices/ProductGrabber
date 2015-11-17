@@ -31,7 +31,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to time_sort_cart_path(@cart),
+        format.html { redirect_to init_cart_path(@cart),
                                   notice: 'Item successfully added to cart.' }
         format.json { render json: @line_item,
                              status: :created, location: @line_item }
@@ -64,7 +64,7 @@ class LineItemsController < ApplicationController
     @cart = current_cart
     @cart.get_items(nil)
     respond_to do |format|
-      format.html { redirect_to time_sort_cart_path(@cart), notice: 'Item successfully removed from cart.' }
+      format.html { redirect_to init_cart_path(@cart), notice: 'Item successfully removed from cart.' }
       format.json { head :no_content }
     end
     @line_item.destroy
