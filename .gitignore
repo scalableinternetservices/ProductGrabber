@@ -2,4 +2,4 @@
 tmp/*
 log/*
 solr/*
-db/development.sqlite3
+db/seeds.rb

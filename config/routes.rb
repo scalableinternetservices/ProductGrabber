@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get :like_sort, on: :member
     get :price_sort, on: :member
     get :time_sort, on: :member
+    get :search, on: :member
+    get :init, on: :member
   end
 
   root 'welcomes#index'
