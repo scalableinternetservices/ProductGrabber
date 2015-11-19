@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'yaml_db'
 gem 'seed_dump'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -12,8 +13,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -24,21 +24,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'pry'
 gem 'pry-nav'
 gem 'will_paginate', '~> 3.0.6'
-
 gem 'byebug'
 gem 'web-console', '~> 2.0'
 gem 'lorem', :groups => [:development]
@@ -50,6 +41,5 @@ gem 'byebug'
 gem 'web-console', '~> 2.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sunspot_rails'
- 
 
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'

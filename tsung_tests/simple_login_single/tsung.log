@@ -1,0 +1,85 @@
+# stats: dump at 1447948905
+stats: users 8 8
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 4.255650640684613 0 4.255650640684613 4.255650640684613 0 0
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0 0.0 0.0 0 0
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3172.69921875 0 3172.69921875 3172.69921875 0 0
+stats: users_count 8 8
+stats: finish_users_count 0 0
+# stats: dump at 1447948915
+stats: users 20 20
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 2 0 2 2 0 0
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 26 0 26 26 0 0
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.678183613030602 0.0 4.255650640684613 1.678183613030602 4.255650640684613 1
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 1
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3172.48828125 0.0 3172.69921875 3172.48828125 3172.69921875 1
+stats: users_count 12 20
+stats: finish_users_count 0 0
+# stats: dump at 1447948925
+stats: users 30 30
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 2 0 2.0 1
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 57.0 0.0 57 26 26.0 1
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.183431952662722 0.0 4.255650640684613 1.183431952662722 2.9669171268576076 2
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 2
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3172.38671875 0.0 3172.69921875 3172.38671875 3172.59375 2
+stats: users_count 10 30
+stats: finish_users_count 0 0
+# stats: dump at 1447948935
+stats: users 50 50
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 9.0 0.0 9 0 1.0 2
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 63.0 0.0 63 26 41.5 2
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.1869436201780417 0.0 4.255650640684613 1.183431952662722 2.3724220687926456 3
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 3
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3171.95703125 0.0 3172.69921875 3171.95703125 3172.5247395833335 3
+stats: users_count 20 50
+stats: finish_users_count 0 0
+stats: newphase 1 1
+# stats: dump at 1447948945
+stats: users 72 72
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 237.0 0.0 237 0 3.6666666666666665 3
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 331.0 0.0 331 26 48.666666666666664 3
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 8.108108108108109 0.0 8.108108108108109 1.183431952662722 2.076052456638995 4
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 4
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3170.28125 0.0 3172.69921875 3170.28125 3172.3828125 4
+stats: users_count 22 72
+stats: finish_users_count 0 0
+stats: newphase 0 1
+# stats: dump at 1447948955
+stats: users 90 90
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 426.0 0.0 426 0 62.0 4
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 397.0 0.0 397 26 119.25 4
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.7733990147783252 0.0 8.108108108108109 1.183431952662722 3.282463586932818 5
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 5
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3169.75 0.0 3172.69921875 3169.75 3171.9625 5
+stats: users_count 18 90
+stats: finish_users_count 0 0
+stats: newphase 0 1
+# stats: dump at 1447948965
+stats: users 118 118
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 176.0 0.0 426 0 134.8 5
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 244.0 0.0 397 26 174.8 5
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.5763546798029555 0.0 8.108108108108109 1.183431952662722 3.0309528249070685 6
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 6
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3169.5703125 0.0 3172.69921875 3169.5703125 3171.59375 6
+stats: users_count 28 118
+stats: finish_users_count 0 0
+stats: newphase 1 2
+# stats: dump at 1447948975
+stats: users 160 160
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 426 0 141.66666666666666 6
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 161.0 0.0 397 26 186.33333333333334 6
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.5794669299111548 0.0 8.108108108108109 1.183431952662722 2.8231530898921955 7
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 7
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3168.91015625 0.0 3172.69921875 3168.91015625 3171.3046875 7
+stats: users_count 42 160
+stats: finish_users_count 0 0
+stats: newphase 0 2
+# stats: dump at 1447948985
+stats: users 206 206
+stats: {recvpackets,"tsung_controller@ip-172-30-3-113"} 1 196.0 0.0 426 0 121.42857142857143 7
+stats: {sentpackets,"tsung_controller@ip-172-30-3-113"} 1 396.0 0.0 397 26 182.71428571428572 7
+stats: {cpu,"tsung_controller@ip-172-30-3-113"} 1 1.9704433497536946 0.0 8.108108108108109 1.183431952662722 2.6676923198945657 8
+stats: {load,"tsung_controller@ip-172-30-3-113"} 1 0.0 0.0 0.0 0.0 0.0 8
+stats: {freemem,"tsung_controller@ip-172-30-3-113"} 1 3167.5 0.0 3172.69921875 3167.5 3171.00537109375 8
+stats: users_count 46 206
+stats: finish_users_count 0 0
+stats: newphase 0 2

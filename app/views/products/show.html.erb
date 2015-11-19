@@ -1,8 +1,5 @@
 <br />
 
-  <p><h3><%= link_to 'Manage my cart',carts_path,method: 'post', :class => 'button btn btn-primary' %></h3></p>
-
-
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -26,47 +23,14 @@
 
 
 			  <% if !current_user.find_product(@product.id) %>
-				  <%= link_to 'Add', favorites_path(product_id: @product), method: 'post'%> |
+				  <%= link_to 'Like', favorites_path(product_id: @product), method: 'post'%>
 			  <% else %>
-				  <%= link_to 'Dislike', favorite_path(current_user.like_product(@product.id)), method: 'delete'%> |
+				  <%= link_to 'Remove like', favorite_path(current_user.like_product(@product.id)), method: 'delete'%>
 			  <% end %>
+			  &nbsp;(<%= @product.favorites.count %> likes)&nbsp;|&nbsp;
 			  <%= link_to 'Add to Cart', line_items_path(product_id: @product), method: 'post'%>
-			  <p>liked by <%= @product.favorites.count %> customers</p>
 
-
-			  <%= link_to 'Edit', edit_product_path(@product) %> |
-					<%= link_to 'Back', products_path %>
+			  <br />
+			  <%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Back', products_path %>
 			  <br>
-			  <%= link_to 'Enter my Collections', @current_user %>
-
-			</div>
-		</div>
-
-		<div id="attributions-modal" class="modal fade">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Attributions</h4>
-					</div>
-					<div class="modal-body">
-						<ol>
-							<li><div>Favicon by <a href="http://flaticons.net/" title="Flaticon">Flaticon</a> (Royalty free).</div></li>
-						</ol>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	
-	<script data-main="../scripts/search" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-</html>
-
-
+			  <%= link_to 'See my Favorites', @current_user %>
