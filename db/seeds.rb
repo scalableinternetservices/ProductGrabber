@@ -1,3 +1,5 @@
+User.delete_all
+
 for i in 1..1000 do
 user = User.create!(
 name: "user"+"#{i}",

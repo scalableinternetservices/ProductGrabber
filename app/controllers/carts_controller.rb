@@ -2,6 +2,7 @@ include CartsHelper
 
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :like_sort, :price_sort, :time_sort, :search, :init]
+  before_action :logged_in_user
 
   # GET /carts
   # GET /carts.json
