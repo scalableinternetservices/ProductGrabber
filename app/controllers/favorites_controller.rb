@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
   before_action :set_favorite, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
 
   # GET /favorites
   # GET /favorites.json
