@@ -1,18 +1,20 @@
+include ProductsHelper
 require 'paperclip'
 
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user
   # GET /products
   # GET /products.json
   def index
+
     @query = Product.search do
         fulltext params[:search]
- 
+        paginate :page => params[:page] || 1, :per_page => 10
         facet :price, :range => 0..500, :range_interval => 100
         with(:price, Range.new(*params[:price_range].split("..").map(&:to_i))) if params[:price_range].present?
- 
     end
+
     @products = @query.results
   end
 

@@ -1,0 +1,6 @@
+.project
+tmp/*
+log/*
+solr/*
+db/development.sqlite3
+db/seed.rb

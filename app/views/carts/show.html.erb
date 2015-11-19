@@ -1,0 +1,71 @@
+<h2 class="text-info">Your Cart</h2>
+<br />
+
+<%= link_to 'Sort by price',price_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+<%= link_to 'Sort by like',like_sort_cart_path(@cart), :class => 'button btn btn-primary' %>
+</br>
+</br>
+<%= link_to 'Full Catalog',init_cart_path(@cart), :class => 'button btn btn-primary' %>
+
+</br>
+</br>
+
+<% @cart.category.each do |key,value|%>
+    <%= link_to key,search_cart_path(@cart,:key=>key), :class => 'button btn btn-primary'%>
+<% end %>
+
+<br /><br />
+
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<ul>
+
+  <% if @cart.items.nil? %>
+      <h4>Nothing added.</h4>
+  <% else %>
+      <% @cart.items.each do |item| %>
+
+          <br /><br />
+          <div class="row view-section">
+            <div class="col-sm-3">
+              <strong><%= @cart.count %></strong>
+              <%= image_tag item.product.photo_file_name, size:"200x200" %>
+            </div>
+            <div class="col-sm-9 view-section-details">
+              <h3><%= link_to item.product.name, item.product %></h3>
+              <p class="text-danger"><strong><%= number_to_currency(item.product.price) %></strong></p>
+              <% if !current_user.find_product(item.product.id) %>
+                  <%= link_to 'Like', favorites_path(product_id: item.product), method: 'post'%> |
+              <% else %>
+                  <%= link_to 'Remove like', favorite_path(current_user.like_product(item.product.id)), method: 'delete' %> |
+              <% end %>
+              <p>liked by <%= item.product.favorites.count %> customers</p>
+
+              <%=link_to "Remove from my cart", line_item_path(item), method: 'delete'%>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+  <br /><br />
+  <div class="row view-section">
+  </div>
+
+</ul>
+
+<% if !@cart.products.nil? %>
+    <h3>You Probably like</h3><div class="row view-section">
+  <% @cart.products.each do |product| %>
+      <%= image_tag product.photo_file_name, size:"200x200" %>
+      <strong><%= link_to number_to_currency(product.price),product %></strong>
+      &nbsp;&nbsp;&nbsp;
+
+  <% end %>
+<% end %>
+</div>
+
+<%= link_to 'Empty cart', @cart, method: 'delete', confirm: 'Are you sure?',:class => 'button btn btn-primary' %>
+<%= link_to 'Continue adding products', products_path, method: 'get',:class => 'button btn btn-primary' %>
+
+<br /><br />
