@@ -1,2 +1,6 @@
 bundle exec sunspot-solr start -p 8983
 rake db:migrate
+host=$(cat database.yml | cut -d ' ' -f 4 | grep amazon)
+mysql -h $host -uroot -ppassword -D rails_app < ~/app/db/seeds.sql
+rake db:seed
+rake sunspot:solr:reindex
