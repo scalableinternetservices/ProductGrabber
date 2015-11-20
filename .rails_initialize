@@ -1,2 +1,4 @@
 bundle exec sunspot-solr start -p 8983
 rake db:migrate
+mysql -u root -D rails_app < ~/app/db/seeds.sql
+bundle exec rake sunspot:solr:reindex
