@@ -9,7 +9,7 @@
   
   <!-- Server side setup -->
 <servers>
-  <server host="52.91.206.198" port="8000" type="tcp"></server>
+  <server host="productgrabber-mp-2-m3-412729526.us-east-1.elb.amazonaws.com" port="8000" type="tcp"></server>
 </servers>
 
   <load>
@@ -48,16 +48,13 @@
 
    <sessions>
         <session name='login_cart_logout' probability='100'  type='ts_http'>
-        <request><http url='http://52.91.206.198/login' version='1.1' method='GET'></http></request>
-
-        <thinktime random='true' value='5'/>
+        <request><http url='http://productgrabber-mp-2-m3-412729526.us-east-1.elb.amazonaws.com/login' version='1.1' method='GET'></http></request>
 
         <request><http url='/assets/application-85f3e37588d64cdc8817d7a50fc3c1d80f51f2e0f103d0a60a467698fe9a7f28.css' version='1.1' method='GET'></http></request>
         <request><http url='/css/index.css' version='1.1' method='GET'></http></request>
         <request><http url='/assets/application-d3b407e8dc3d82934fb3d97690e3ef706d4d51c4871524fbc3f9fd4dbd1a731c.js' version='1.1' method='GET'></http></request>
         <request><http url='/favicon.png' version='1.1' method='GET'></http></request>
 
-        <thinktime random='true' value='11'/>
 
       <request>
         <dyn_variable name="authenticity_token" ></dyn_variable> 
@@ -76,7 +73,6 @@
 
       <request><http url='/products' version='1.1' method='GET'></http></request>
 
-      <thinktime random='true' value='1'/>
 
       <request><http url='/css/star-rating.min.css' version='1.1' method='GET'></http></request>
       <request><http url='/scripts/star-rating.min.js' version='1.1' method='GET'></http></request>
@@ -98,14 +94,13 @@
       </setdynvars>
 
       <request subst="true">
-        <http url='http://52.91.206.198/line_items?product_id=%%_product_num%%' version='1.1'  contents='_method=post&amp;authenticity_token=%%_authenticity_token%%' content_type='application/x-www-form-urlencoded' method='POST'>
+        <http url='http://productgrabber-mp-2-m3-412729526.us-east-1.elb.amazonaws.com/line_items?product_id=%%_product_num%%' version='1.1'  contents='_method=post&amp;authenticity_token=%%_authenticity_token%%' content_type='application/x-www-form-urlencoded' method='POST'>
         </http>
       </request>
       <request><http url='/carts/1/init' version='1.1' method='GET'></http></request>
       <request><http url='/carts/1/time_sort' version='1.1' method='GET'></http></request>
       <request><http url='/carts/1' version='1.1' method='GET'></http></request>
 
-      <thinktime random='true' value='4'/>
       
       <request subst="true">
         <http url='/line_items/1' version='1.1'  contents='_method=delete&amp;authenticity_token=%%_authenticity_token%%' content_type='application/x-www-form-urlencoded' method='POST'></http>
@@ -114,11 +109,9 @@
       <request><http url='/carts/1/time_sort' version='1.1' method='GET'></http></request>
       <request><http url='/carts/1' version='1.1' method='GET'></http></request>
 
-      <thinktime random='true' value='6'/>
 
-      <request subst="true"><http url='/logout' version='1.1'  contents='_method=delete&amp;authenticity_token=%%_authenticity_token%%' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
-      <request><http url='/products' version='1.1' method='GET'></http></request>
-      <request><http url='/login' version='1.1' method='GET'></http></request>
+      <request subst="true">
+        <http url='/logout' version='1.1'  contents='_method=delete&amp;authenticity_token=%%_authenticity_token%%' content_type='application/x-www-form-urlencoded' method='POST'></http></request>
 
 
       </session>
