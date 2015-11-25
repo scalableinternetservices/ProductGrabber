@@ -1,0 +1,39 @@
+[25/Nov/2015:16:26:21 -0000] server crash for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"Error reading request: No request received on keep-alive connection before server side timeout"
+
+[25/Nov/2015:16:26:21 -0000] server crash for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"Error reading request: No request received on keep-alive connection before server side timeout"
+
+[25/Nov/2015:16:26:21 -0000] server crash for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"Error reading request: No request received on keep-alive connection before server side timeout"
+
+[25/Nov/2015:16:26:21 -0000] server crash for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"Error reading request: No request received on keep-alive connection before server side timeout"
+
+[25/Nov/2015:16:26:21 -0000] server crash for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"Error reading request: No request received on keep-alive connection before server side timeout"
+
+[25/Nov/2015:16:29:22 -0000] access to /es/images/graphes-Transactions-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Transactions-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Perfs-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Perfs-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Transactions-rate_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Transactions-rate_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Perfs-rate_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Perfs-rate_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Size-rate_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Size-rate_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Users_Arrival-rate_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Users_Arrival-rate_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Users-simultaneous_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Users-simultaneous_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-cpu-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-cpu-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-freemem-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-freemem-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-load-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-load-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-Transactions-mean_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-Transactions-mean_tn.png"
+[25/Nov/2015:16:29:23 -0000] access to /es/images/graphes-HTTP_CODE-rate_tn.png failed for 0:0:0:0:0:FFFF:A9E7:32E6, reason: 
+"mod_esi: Client not authorized to evaluate: images/graphes-HTTP_CODE-rate_tn.png"
