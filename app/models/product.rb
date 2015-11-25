@@ -12,11 +12,11 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
   validates :photo, presence: true
   
-	searchable do
-	    text :name, :boost => 2
-	    text :description
-	    double :price
-  end
+	#searchable do
+	#    text :name, :boost => 2
+	#    text :description
+	#    double :price
+  #end
 
   private
   # ensure that there are no line items referencing this product

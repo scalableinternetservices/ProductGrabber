@@ -7,15 +7,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    #@query = Product.search do
+    #    fulltext params[:search]
+    #    paginate :page => params[:page] || 1, :per_page => 10
+     #   facet :price, :range => 0..500, :range_interval => 100
+     #   with(:price, Range.new(*params[:price_range].split("..").map(&:to_i))) if params[:price_range].present?
+    #end
+    @keyword = params[:search]
+    @products = Product.where("(name LIKE '#{@keyword}%') OR (description LIKE '#{@keyword}%')").paginate(:page => params[:page], :per_page => 15)
 
-    @query = Product.search do
-        fulltext params[:search]
-        paginate :page => params[:page] || 1, :per_page => 10
-        facet :price, :range => 0..500, :range_interval => 100
-        with(:price, Range.new(*params[:price_range].split("..").map(&:to_i))) if params[:price_range].present?
-    end
-
-    @products = @query.results
+    #@products = @query.results
   end
 
   # GET /products/1
