@@ -35,11 +35,11 @@ gem 'web-console', '~> 2.0'
 gem 'lorem', :groups => [:development]
 gem 'spring'
 gem 'acts-as-taggable-on'
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+#gem 'sunspot_rails'
+#gem 'sunspot_solr'
 gem 'byebug'
 gem 'web-console', '~> 2.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'sunspot_rails'
+#gem 'sunspot_rails'
 
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'

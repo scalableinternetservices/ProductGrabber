@@ -29,22 +29,6 @@
 				<%= link_to 'New Product', new_product_path, :class => 'button btn btn-default' %>
 			</h3>
 		</div>
-		
-		<div class="col-sm-3">
-			<h3>Price Range ($): </h3>
-		</div>
-	
-		<div class="col-sm-7 view-section-details">
-			<h3>
-				<ul class="pagination" style="margin-top: 0;">
-		  			<% for row in @query.facet(:price).rows %>
-					    <li>
-					        <%= link_to row.value, :price_range => row.value, :search => params[:search] %>
-					    </li>
-	 				<% end %>
-	 			</ul>
-	 		</h3>
-		</div>
 	</div>
 
 	<% if @products.empty? %>
