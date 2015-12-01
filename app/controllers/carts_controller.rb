@@ -7,18 +7,21 @@ class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
   def index
-    @carts = Cart.all
+    if stale?([Cart.all, LineItem.all])
+      @carts = Cart.all
+    end
   end
 
   # GET /carts/1
   # GET /carts/1.json
   def show
+    fresh_when([@cart, @cart.line_items])
     @cart.count_load(0)
   end
 
   # GET /carts/new
   def new
-    @cart = Cart.new
+    @cart = Cart.new if stale?(Cart.all)
   end
 
   # GET /carts/1/edit
