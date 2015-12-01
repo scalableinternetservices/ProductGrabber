@@ -1,5 +1,14 @@
 module ProductsHelper
 
+  
+    def cache_key_for_product_table
+        "product-table-#{Product.maximum(:updated_at)}"
+    end
+
+    def cache_key_for_product_row(product)
+        "product-#{product.id}-#{product.updated_at}"
+    end
+
     class AmazonProduct
         attr_accessor :asin
         attr_accessor :title

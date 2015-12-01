@@ -6,6 +6,7 @@
 	<% end %>
 
 	<div class="row">
+
 		<div class="col-sm-3">
 		<h3>Search:</h3>
 		</div>
@@ -30,7 +31,9 @@
 			</h3>
 		</div>
 	</div>
-
+	
+	<% cache(cache_key_for_product_table) do %>
+	
 	<% if @products.empty? %>
 		<div class="row view-section">
 			<div class="col-sm-12">
@@ -39,34 +42,39 @@
 		</div>
 	<% else %>
 		<% @products.each do |product| %>
+			<% cache(cache_key_for_product_row(product)) do %>
+			
 			<div class="row view-section">
 				<div class="col-sm-3">
 					<%= image_tag product.photo_file_name, size:"200x200", :class => "txt-product-pic" %>
 				</div>
-			<div class="col-sm-9 view-section-details">
-				<h3 class="txt-product-name"><%= link_to product.name, product %></h3>
-				<p class="text-danger txt-product-price"><strong><%= number_to_currency(product.price) %></strong></p>
-				<p class="text-muted txt-product-description"><%= product.description %></p>
-				<p class="text-warning txt-category"><%= product.category %></p>
-				<input value=<%= product.rating %> type="number" class="rating txt-product-rating" data-min=0 data-max=5 data-step=0.5 data-size="xs">
-				<% if !current_user.find_product(product.id) %>
-					<%= link_to 'Like', favorites_path(product_id: product), method: 'post'%>
-				<% else %>
-					<%= link_to 'Remove like', favorite_path(current_user.like_product(product.id)), method: 'delete' %>
-				<% end %>
-				&nbsp;(<span class="txt-product-likes"><%= product.favorites.count %> likes</span>)&nbsp;|&nbsp;
-				<%= link_to 'Add to Cart', line_items_path(product_id: product), method: 'post'%>&nbsp;|&nbsp;
-				<label style="font-weight: normal;">
-					<input style="position: relative; top: 2px;" type="checkbox" class="product-compare" data-product-id="<%= product.id %>"/>
-					Compare
-				</label>
-				
+				<div class="col-sm-9 view-section-details">
+					<h3 class="txt-product-name"><%= link_to product.name, product %></h3>
+					<p class="text-danger txt-product-price"><strong><%= number_to_currency(product.price) %></strong></p>
+					<p class="text-muted txt-product-description"><%= product.description %></p>
+					<p class="text-warning txt-category"><%= product.category %></p>
+					<input value=<%= product.rating %> type="number" class="rating txt-product-rating" data-min=0 data-max=5 data-step=0.5 data-size="xs">
+					<% if !current_user.find_product(product.id) %>
+						<%= link_to 'Like', favorites_path(product_id: product), method: 'post'%>
+					<% else %>
+						<%= link_to 'Remove like', favorite_path(current_user.like_product(product.id)), method: 'delete' %>
+					<% end %>
+					&nbsp;(<span class="txt-product-likes"><%= product.favorites.count %> likes</span>)&nbsp;|&nbsp;
+					<%= link_to 'Add to Cart', line_items_path(product_id: product), method: 'post'%>&nbsp;|&nbsp;
+					<label style="font-weight: normal;">
+						<input style="position: relative; top: 2px;" type="checkbox" class="product-compare" data-product-id="<%= product.id %>"/>
+						Compare
+					</label>
+					
 			</div>
+			
+			<% end %>
 			</div>
 		<% end %>
 		<div class="row view-section text-center">
 		<%= will_paginate(@products) %>
 		</div>
+	<% end %>
 	<% end %>
 
 	<script>
