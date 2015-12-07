@@ -10,5 +10,6 @@ password_confirmation: "123456"
 
 user.cart=Cart.create
 user.cart.get_items(nil)
+user.cart.get_re_products(nil)
 
 end
