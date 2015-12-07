@@ -1,2 +1,4 @@
-rake db:migrate
-mysql -u root -D rails_app < ~/app/db/seeds.sql
+host=$(cat ~/app/config/database.yml | cut -d ' ' -f 4 | grep amazon)
+mysql -h $host -uroot -ppassword -D rails_app < ~/app/db/seeds.sql
+rake db:seed
+rake sunspot:solr:reindex
