@@ -28,19 +28,8 @@ class CartsController < ApplicationController
   # POST /carts
   # POST /carts.json
   def create
-    @cart = current_cart
-
-    #@cart.line_items.sort!{|a,b|a.updated_at <=> b.updated_at}
-
-    respond_to do |format|
-      if @cart.save
-        format.html { redirect_to init_cart_path(@cart), notice: 'Cart was successfully created.' }
-        format.json { render :show, status: :created, location: @cart }
-      else
-        format.html { render :new }
-        format.json { render json: @cart.errors, status: :unprocessable_entity }
-      end
-    end
+    @cart=current_user.cart
+    redirect_to time_sort_cart_path(@cart)
   end
 
   # PATCH/PUT /carts/1
@@ -60,13 +49,11 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    @cart = current_cart
     @cart.get_items(nil)
-    @cart.destroy
-    session[:cart_id] = nil
+    @cart.line_items.delete_all
 
     respond_to do |format|
-      format.html { redirect_to products_path, notice: 'Your cart has been empty'}
+      format.html { redirect_to @cart, notice: 'Your cart has been empty'}
       format.json { head :no_content }
     end
   end

@@ -19,6 +19,8 @@ end
 
 def create
 @user = User.new(user_params)
+@user.cart=Cart.create
+@user.cart.get_items(nil)
 
 if @user.save
    #flash[:success] = "Welcome to the Sample App!"

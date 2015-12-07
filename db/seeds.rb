@@ -7,4 +7,8 @@ email: "user"+"#{i}"+"@gmail.com",
 password: "123456",
 password_confirmation: "123456"
 )
+
+user.cart=Cart.create
+user.cart.get_items(nil)
+
 end

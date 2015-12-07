@@ -26,7 +26,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
 
   def create
-    @cart = current_cart
+    @cart = current_user.cart
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
 
@@ -62,7 +62,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.json
   def destroy
     @line_item=LineItem.find(params[:id])
-    @cart = current_cart
+    @cart = current_user.cart
     @cart.get_items(nil)
     respond_to do |format|
       format.html { redirect_to init_cart_path(@cart), notice: 'Item successfully removed from cart.' }

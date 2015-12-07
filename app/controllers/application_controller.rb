@@ -13,23 +13,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
-
-  def current_cart
-    @user=current_user
-    
-    if @user.cart.nil?
-      cart = Cart.create
-      cart.get_items(nil)
-      @user.cart=cart
-      cart
-    else
-      @user.cart.get_items(nil)
-      @user.cart
-    end
-  end
-
-
   def log_out
     session.delete(:user_id)
     @current_user = nil
