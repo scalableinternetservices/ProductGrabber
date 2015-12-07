@@ -29,6 +29,9 @@ class CartsController < ApplicationController
   # POST /carts.json
   def create
     @cart=current_user.cart
+    @cart.get_items(nil)
+    @cart.get_items(@cart.line_items)
+    @cart.get_re_products(nil)
     redirect_to time_sort_cart_path(@cart)
   end
 
