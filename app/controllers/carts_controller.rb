@@ -54,6 +54,8 @@ class CartsController < ApplicationController
   def destroy
     @cart.get_items(nil)
     @cart.line_items.delete_all
+    @cart.get_items(nil)
+    @cart.get_re_products(nil)
 
     respond_to do |format|
       format.html { redirect_to @cart, notice: 'Your cart has been empty'}
